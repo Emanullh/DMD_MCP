@@ -1,0 +1,283 @@
+code;name
+a;Armor
+e;Evasion
+h;Health
+hr;Health Regen
+hol;Heal on Level
+hpg;Heals Multiplier %
+ls;Lifesteal on Hit (% chance)
+hok;Lifeheal on Attack-Kill (% chance)
+hod;Lifeheal on Enemy Dies (% chance)
+d%;Damage %
+ad%;Attack Damage %
+dd%;Dash Damage %
+sd%;Strike Damage %
+cd%;Cast Damage %
+pd%;Power Damage %
+sud%;Summon Damage %
+std%;Status Damage %
+deu%;Damage % vs undamaged enemies
+debl%;Damage % vs enemies below % life
+deal%;Damage % vs enemies above % life
+dbar;Damage % vs barriers
+cc%;Critical Chance %
+acc%;Attack Critical Chance %
+dcc%;Dash Critical Chance %
+scc%;Strike Critical Chance %
+ccc%;Cast Critical Chance %
+pcc%;Power Critical Chance %
+as%;Attack Speed %
+ss%;Cooldown Reduction %
+sus%;Summon Attack Speed %
+s%;Attack Speed & Faster Cooldowns %
+v%;Projectile Velocity %
+ang%;Projectile Angle %
+acnt;Attack Projectile Count
+dcnt;Dash Projectile Count
+scnt;Strike Projectile Count
+ccnt;Cast Projectile Count
+pcnt;Power Projectile Count
+sucnt;Summon Count
+apnc;Attack Pounce
+rng%;Range %
+arng%;Attack Range %
+are%;Area %
+aare%;Attack Area %
+dare%;Dash Area %
+sare%;Strike Area %
+care%;Cast Area %
+pare%;Power Area %
+suare%;Summon Attack Area %
+u%;Duration %
+du%;Dash Duration %
+su%;Strike Duration %
+cu%;Cast Duration %
+pu%;Power Duration %
+suu%;Summon Duration %
+thr%_e;Shorter Enemy Barriers %
+sums%;Summon Movement Speed %
+ms;Movement Speed
+ms%;Movement Speed %
+msp;Movement Speed Penalty
+dcld%;Dash Recharge Speed %
+dchg;Dash Charges
+drng;Dash Distance
+akb;Knockback (to attack)
+lck;Luck %
+pul;Pull Area
+pxp;Passive Experience Gain
+xp%;Experience Gain %
+rev;Revival
+brer;Reroll
+bban;Banish
+bski;Skip
+msa%;Adept Skills %
+mse%;Expert Skills %
+msm%;Master Skills %
+msl%;Legend Skills %
+msru%;Rarity Upgrade Offer %
+mslvl%;Level Upgrade Offer %
+msnew%;New Offer %
+msrarm;Rarity Upgrade can upgrade Boons to Mythic.
+mic%;Common Items Drop %
+mir%;Rare Items Drop %
+mie%;Epic Items Drop %
+mim%;Mythic Items Drop %
+mii%;Immortal Items Drop %
+miuniq%;Unique Items Drop %
+sslot;Strike Slot
+cslot;Cast Slot
+pslot;Power Slot
+suslot;Summon Slot
+a%;Armor %
+e%;Evasion %
+h%;Health %
+hr%;Health Regen %
+pul%;Pull Area %
+g%;Gold Multiplier %
+pdr%;Pick Ups Drop Multiplier %
+a-;Armor-
+e-;Evasion-
+h-;Health-
+hr-;Health Regen-
+hol-;Heal on Level-
+hpg-;Heals Multiplier %-
+ls-;Lifesteal on Hit (% chance)-
+hok-;Lifeheal on Attack-Kill (% chance)-
+hod-;Lifeheal on Enemy Dies (% chance)-
+d%-;Damage %-
+ad%-;Attack Damage %-
+dd%-;Dash Damage %-
+sd%-;Strike Damage %-
+cd%-;Cast Damage %-
+pd%-;Power Damage %-
+sud%-;Summon Damage %-
+std%-;Status Damage %-
+deu%-;Damage % vs undamaged enemies-
+debl%-;Damage % vs enemies below % life-
+deal%-;Damage % vs enemies above % life-
+dbar-;Damage % vs barriers-
+cc%-;Critical Chance %-
+acc%-;Attack Critical Chance %-
+dcc%-;Dash Critical Chance %-
+scc%-;Strike Critical Chance %-
+ccc%-;Cast Critical Chance %-
+pcc%-;Power Critical Chance %-
+as%-;Attack Speed %-
+ss%-;Cooldown Reduction %-
+sus%-;Summon Attack Speed %-
+s%-;Attack Speed & Faster Cooldowns %-
+v%-;Projectile Velocity %-
+ang%-;Projectile Angle %-
+acnt-;Attack Projectile Count-
+dcnt-;Dash Projectile Count-
+scnt-;Strike Projectile Count-
+ccnt-;Cast Projectile Count-
+pcnt-;Power Projectile Count-
+sucnt-;Summon Count-
+apnc-;Attack Pounce-
+rng%-;Range %-
+arng%-;Attack Range %-
+are%-;Area %-
+aare%-;Attack Area %-
+dare%-;Dash Area %-
+sare%-;Strike Area %-
+care%-;Cast Area %-
+pare%-;Power Area %-
+suare%-;Summon Attack Area %-
+u%-;Duration %-
+du%-;Dash Duration %-
+su%-;Strike Duration %-
+cu%-;Cast Duration %-
+pu%-;Power Duration %-
+suu%-;Summon Duration %-
+-thr%_e-;Shorter Enemy Barriers %-
+sums%-;Summon Movement Speed %-
+ms-;Movement Speed-
+ms%-;Movement Speed %-
+msp-;Movement Speed Penalty-
+dcld%-;Dash Recharge Speed %-
+dchg-;Dash Charges-
+drng-;Dash Distance-
+akb-;Knockback (to attack)-
+lck-;Luck %-
+pul-;Pull Area-
+pxp-;Passive Experience Gain-
+xp%-;Experience Gain %-
+rev-;Revival-
+brer-;Reroll-
+bban-;Banish-
+bski-;Skip-
+msa%-;Adept Skills %-
+mse%-;Expert Skills %-
+msm%-;Master Skills %-
+msl%-;Legend Skills %-
+msru%-;Rarity Upgrade Offer %-
+mslvl%-;Level Upgrade Offer %-
+msnew%-;New Offer %-
+msrarm-;Rarity Upgrade can upgrade Boons to Mythic.-
+mic%-;Common Items Drop %-
+mir%-;Rare Items Drop %-
+mie%-;Epic Items Drop %-
+mim%-;Mythic Items Drop %-
+mii%-;Immortal Items Drop %-
+miuniq%-;Unique Items Drop %-
+sslot-;Strike Slot-
+cslot-;Cast Slot-
+pslot-;Power Slot-
+suslot-;Summon Slot-
+a%-;Armor %-
+e%-;Evasion %-
+h%-;Health %-
+hr%-;Health Regen %-
+pul%-;Pull Area %-
+g%-;Gold Multiplier %-
+pdr%-;Pick Ups Drop Multiplier %-
+auoh1;Apply Weakened on nth Attack
+auoh2;Apply Marked on nth Attack
+auoh3;Apply Burning on nth Attack
+auoh4;Apply Ruptured on nth Attack
+auoh5;Apply Chilled on nth Attack
+auoh6;Apply Frozen on nth Attack
+auoh7;Apply Fear on nth Attack
+auoh8;Apply Cursed on nth Attack
+auoh9;Apply Stunned on nth Attack
+auoh10;Apply Smited on nth Attack
+auoh11;Apply Immobilized on nth Attack
+auoh13;Apply Poisoned on nth Attack
+soh1;Firebolt on nth Hit
+soh3;Extra Attack on nth Hit
+soh4;Black LightningBolt on nth Hit
+soh6;Fire Trails on nth Hit
+soh7;Breath of Frost on nth Hit
+soh8;Breath of Poison on nth Hit
+soh9;Lightning Zaps on nth Hit
+soh10;Lightning Bolt on nth Hit
+soh11;Black Chain Lightning on nth Hit (0-666, 6 on every 60 sec)
+sod1;Frost Nova on nth Dash
+sod2;Poison Nova on nth Dash
+sod3;Half-Moons on nth Dash
+sod4;Recharge Dash on Dash
+sod8;Lightning Orb on Dash
+sod10;Evasion on Dash
+soga1;Black Single Chain Lightning on nth IsAttacked
+sogh1;Lightning Bolt on nth GetHit
+sogh2;Deal Damage Back on nth GetHit
+sogh4;Fire Nova on nth GetHit
+solvl2;Lightnings Bolts Armageddon on LvlUp
+sop1;Fear on EnemyPostureBreak
+sop2;Gain Gold on EliteKill
+sosh1;Meteors on nth DoodadUse
+sosh2;Magnet on nth DoodadUse
+soc2;Firebolt on CD
+soc5;Crescents on CD
+ssum1;Book Warrior Summon
+ssum2;Dragon Mort Summon
+ssum3;Green Parrot Summon
+ssum4;Skeleton Summon
+ssum5;Red Parrot Summon
+ssum6;Blue Parrot Summon
+ssum7;Yellow Parrot Summon
+ssum8;Pink Parrot Summon
+ssum9;Black Parrot Summon
+ssum10;White Parrot Summon
+sp1;% To Heal % on nth BossKill
+sp2;Burning Malady
+sp3;Refresh Enemy Statuses on nth Hit
+sp4;Damage % vs Statused Enemies
+sp5;Damage % vs Immobilized Enemies
+sp6;Global DPS to Enemies
+sp7;Enemy Damage % Reduced
+sp8;Enemy Attack Speeds % Reduced
+sp9;Enemy Projectile Velocity % Reduced
+sp10;Enemy Movement Speed % Reduced
+sp11;Enemy Actions Speed % Reduced
+sp12;Enemy Areas % Reduced
+sp13;Enemy Aim % Reduced
+sp14;Damage % vs Minions
+sp15;Damage % vs Elites
+sp16;Damage % vs Bosses
+sp17;Attack Speed % when below % life
+unstr;Strength
+unstam;Stamina
+unwinter;Winter's Embrace
+unequil;Equilibrium
+unsheph;Shepherd
+unspirkni;Spirit Knife
+unjackrab;Jackrabbit
+ungodrage;Godrage
+undiabol;Diabolic II
+unwitch;Witchsword
+unsncane;Snowswatch Candy Cane
+adeu%;Attack Damage % vs undamaged enemies
+sdeu%;Strike Damage % vs undamaged enemies
+adebl%;Attack Damage % vs enemies below % life
+sdebl%;Strike Damage % vs enemies below % life
+adeal%;Attack Damage % vs enemies above % life
+sdeal%;Strike Damage % vs enemies above % life
+dsum%;Summon Damage %
+av%;Attack Projectile Velocity %
+sv%;Projectile Velocity %
+cnt;Projectile Count
+-thr%_e;Shorter Enemy Barriers %
+

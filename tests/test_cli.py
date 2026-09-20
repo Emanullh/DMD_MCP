@@ -4,6 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+import zipfile
 
 from tests.helpers import profile_outer, profile_with_repo, write_deflated
 
@@ -35,6 +36,18 @@ class CliTests(unittest.TestCase):
         self.assertTrue((output / "unresolved.json").is_file())
         self.assertNotIn(str(save.parent), (output / "inventory.json").read_text())
         self.assertFalse(any(save.parent.glob("*.json")))
+
+    def test_dump_replaces_inventory_archive_with_current_two_json_files(self):
+        save = self.fixture(self.directory / "saves" / "Slot_0.sav")
+        output = self.directory / "output"
+        archive = output / "inventory_bundle.zip"
+        output.mkdir()
+        archive.write_bytes(b"old archive")
+        result = self.run_cli("dump", "--save", str(save), "--output", str(output))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        with zipfile.ZipFile(archive) as bundle:
+            self.assertEqual(sorted(bundle.namelist()), ["inventory.json", "unresolved.json"])
+            self.assertEqual(json.loads(bundle.read("inventory.json"))["schema_version"], 1)
 
     def test_inspect_does_not_create_default_output(self):
         save = self.fixture(self.directory / "Slot_0.sav")

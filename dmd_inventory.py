@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import zipfile
 
 from dmd.extractor import ExtractionError, extract_raw
 from dmd.normalizer import normalize
@@ -23,6 +24,17 @@ def write_json(output_dir: Path, filename: str, value: dict) -> Path:
     target = output_dir / filename
     temporary = target.with_suffix(target.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temporary.replace(target)
+    return target
+
+
+def write_inventory_archive(output_dir: Path) -> Path:
+    """Replace the previous bundle with the two LLM-facing JSON files."""
+    target = output_dir / "inventory_bundle.zip"
+    temporary = target.with_suffix(".zip.tmp")
+    with zipfile.ZipFile(temporary, "w", compression=zipfile.ZIP_DEFLATED) as bundle:
+        for filename in ("inventory.json", "unresolved.json"):
+            bundle.write(output_dir / filename, arcname=filename)
     temporary.replace(target)
     return target
 
@@ -57,6 +69,7 @@ def run_dump(args) -> int:
     write_json(output, "inventory_raw.json", raw)
     write_json(output, "inventory.json", inventory)
     write_json(output, "unresolved.json", unresolved)
+    archive = write_inventory_archive(output)
     if args.debug_dump:
         write_json(output, "debug_structure.json", {"root_keys": sorted(outer), "profile_keys": sorted(raw["profile_state"]), "container_keys": sorted(raw["containers"]), "aliases": raw["aliases"]})
     counts = raw["counts"]
@@ -68,6 +81,7 @@ def run_dump(args) -> int:
     print(f"Affixes parsed: {sum(len(item['raw'].get('Affixes', [])) for item in raw['items'])}")
     print(f"Unknown affix IDs: {len(unresolved['unknown_affix_ids'])}")
     print(f"Output: {output / 'inventory_raw.json'}")
+    print(f"Archive: {archive}")
     return 0
 
 

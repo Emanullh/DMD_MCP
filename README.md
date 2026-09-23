@@ -11,10 +11,10 @@ Requirements: Python 3.11 or newer. Git is needed only to clone the repository.
 ```powershell
 git clone https://github.com/Emanullh/DMD_MCP.git
 cd DMD_MCP
-py -3 dmd_inventory.py dump
+python dmd_inventory.py dump
 ```
 
-On macOS, run `python3 dmd_inventory.py dump` instead of `py -3 dmd_inventory.py dump`.
+If your Windows installation provides the Python Launcher, `py -3 dmd_inventory.py dump` also works. On macOS, run `python3 dmd_inventory.py dump`.
 
 Close the game before running the command so the exported snapshot is consistent.
 
@@ -38,7 +38,7 @@ The tool detects `.sav` files automatically in the following folders. If more th
 | `inspect --save PATH` | Prints a save summary without creating output files. |
 | `validate output/inventory.json` | Checks that an exported inventory is internally consistent. |
 
-Use `py -3 dmd_inventory.py <command>` on Windows and `python3 dmd_inventory.py <command>` on macOS.
+Use `python dmd_inventory.py <command>` on Windows and `python3 dmd_inventory.py <command>` on macOS. Windows installations with the Python Launcher may use `py -3` instead of `python`.
 
 ## Output
 

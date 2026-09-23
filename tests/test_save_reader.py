@@ -1,3 +1,4 @@
+import stat
 import tempfile
 import unittest
 from pathlib import Path
@@ -51,8 +52,9 @@ class SaveReaderTests(unittest.TestCase):
         before = (source.stat().st_size, source.stat().st_mtime_ns)
         snapshot = snapshot_save(source)
         self.addCleanup(snapshot.unlink, missing_ok=True)
+        self.addCleanup(snapshot.chmod, stat.S_IWRITE)
         self.assertNotEqual(snapshot.parent, source.parent)
-        self.assertEqual(snapshot.stat().st_mode & 0o777, 0o400)
+        self.assertEqual(snapshot.stat().st_mode & stat.S_IWRITE, 0)
         self.assertEqual((source.stat().st_size, source.stat().st_mtime_ns), before)
 
     def test_decodes_bom_prefixed_raw_deflate_json(self):

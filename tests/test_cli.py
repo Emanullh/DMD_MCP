@@ -4,8 +4,11 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 import zipfile
 
+import dmd_inventory
 from tests.helpers import profile_outer, profile_with_repo, write_deflated
 
 
@@ -55,6 +58,12 @@ class CliTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("ProfileState detected: yes", result.stdout)
         self.assertFalse((self.directory / "output").exists())
+
+    def test_windows_does_not_report_a_unix_process_probe_as_the_game(self):
+        with patch.object(dmd_inventory.sys, "platform", "win32"), patch.object(
+            dmd_inventory.subprocess, "run", return_value=SimpleNamespace(returncode=0)
+        ):
+            self.assertFalse(dmd_inventory.game_running())
 
     def test_validate_reports_valid_inventory(self):
         inventory = self.directory / "inventory.json"

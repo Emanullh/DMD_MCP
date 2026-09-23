@@ -5,12 +5,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import shutil
+import sys
 import tempfile
 from typing import Callable
 import zlib
 
 
-DEFAULT_SAVE_DIRECTORY = Path.home() / "Library/Application Support/Realm Archive/Death Must Die/Saves"
+def default_save_directory(platform: str = sys.platform) -> Path:
+    directory = "AppData/LocalLow/Realm Archive/Death Must Die/Saves" if platform == "win32" else "Library/Application Support/Realm Archive/Death Must Die/Saves"
+    return Path.home() / directory
+
+
+DEFAULT_SAVE_DIRECTORY = default_save_directory()
 
 
 class SaveReadError(RuntimeError):

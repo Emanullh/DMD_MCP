@@ -40,6 +40,8 @@ def write_inventory_archive(output_dir: Path) -> Path:
 
 
 def game_running() -> bool:
+    if sys.platform == "win32":
+        return False
     try:
         return subprocess.run(["pgrep", "-f", "Death Must Die"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
     except OSError:
@@ -53,6 +55,7 @@ def load(args):
         outer = decode_save(snapshot)
         raw = extract_raw(outer, redacted_source(source))
     finally:
+        snapshot.chmod(0o600)
         snapshot.unlink(missing_ok=True)
     return source, outer, raw
 

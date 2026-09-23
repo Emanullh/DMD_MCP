@@ -2,6 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import dmd.save_reader as save_reader
 from dmd.save_reader import (
     SaveReadError,
     choose_save,
@@ -26,6 +27,13 @@ class SaveReaderTests(unittest.TestCase):
         (self.directory / "Slot_0.sav").write_bytes(b"0")
         (self.directory / "notes.txt").write_text("ignore")
         self.assertEqual([path.name for path in discover_saves(self.directory)], ["Slot_0.sav", "Slot_1.sav"])
+
+    def test_uses_locallow_save_directory_on_windows(self):
+        directory_for = getattr(save_reader, "default_save_directory", lambda platform: None)
+        self.assertEqual(
+            directory_for("win32"),
+            Path.home() / "AppData/LocalLow/Realm Archive/Death Must Die/Saves",
+        )
 
     def test_selects_the_only_discovered_save(self):
         save = (self.directory / "Slot_0.sav")
